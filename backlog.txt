@@ -1,0 +1,29 @@
+(all example extractions given in the comments were made with https://www.textrazor.com/demo)
+
+0) Extractions in general
+doc = Document("Ukraine Accuses Russia of Firing Missiles Over 3 Nuclear Power Plants, Raising Fear of a New Disaster")
+[list/map of extractions] = [specific extraction](doc)
+
+1) Named Entities
+entities = extractEntities(doc)
+# Result is a Map, e.g.
+# {
+# Ukraine: [Place, PopulatedPlace, Country],
+# Russia: [Place, PopulatedPlace, Country],
+# Missile: [...],
+# 3: [Number],
+# Nuclear power: [...],
+# Nuclear power plant: [...]
+# }
+
+
+2) Triples aka Relations
+relations = extractRelations(doc)
+# Result is a List of Lists, e.g.
+# [
+# [Ukraine, Accuses of, Russia Firing Missiles Over 3 Nuclear Power Plants Raising Fear of a New Disaster],
+# [Ukraine, Accuses of Raising, Russia Firing Missiles Over 3 Nuclear Power Plants Fear of a New Disaster]
+# ]
+
+3) Intended Applications
+Using the entities or triples extracted, code can be written that generates training data such as pairs of questions and answers. This training data may be used to fine-tune transformer models
