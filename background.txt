@@ -1,1 +1,2 @@
 https://www.analyticsvidhya.com/blog/2019/09/introduction-information-extraction-python-spacy/
+https://hami-asmai.medium.com/relationship-extraction-from-any-web-articles-using-spacy-and-jupyter-notebook-in-6-steps-4444ee68763f
